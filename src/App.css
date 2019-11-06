@@ -48,6 +48,10 @@ main {
   border: 0;
 }
 
+/* .feature__item {
+  list-style: none;
+} */
+
 .feature + .feature {
   margin-top: 0.8rem;
 }
@@ -98,7 +102,7 @@ while keeping them available to the keyboard */
   cursor: pointer;
 }
 
-.main__summary {
+.cart {
   flex: 3;
   margin-left: 0.2rem;
 }
