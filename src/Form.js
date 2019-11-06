@@ -5,10 +5,9 @@ class Form extends React.Component {
     render() {
         const features = Object.keys(this.props.features)
             .map(key => <Feature key={key} name={key} features={this.props.features[key]} handleUpdate={this.props.handleUpdate} selected={this.props.selected}/>);
-
         return(
             <section className="main__form">
-                <h3>here is my h3</h3>
+                <h3>Customization Options</h3>
                 {features}
             </section>
         )

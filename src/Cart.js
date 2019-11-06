@@ -15,7 +15,7 @@ class Cart extends React.Component {
 
         return (
             <section className="cart">
-                <h3>here is my h3</h3>
+                <h3>Your Computer</h3>
                 {contents}
                 <CartTotal selected={this.props.selected} />
             </section>
