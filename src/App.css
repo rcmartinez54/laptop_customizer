@@ -103,7 +103,7 @@ while keeping them available to the keyboard */
   margin-left: 0.2rem;
 }
 
-.summary__option {
+.cart__option {
   display: grid;
   grid-template-areas:
     'key cost'
@@ -112,22 +112,22 @@ while keeping them available to the keyboard */
   margin-top: 1rem;
 }
 
-.summary__option__label {
+.cart__option__label {
   font-size: 2.2rem;
   font-weight: bold;
   grid-area: key;
 }
 
-.summary__option__value {
+.cart__option__value {
   grid-area: value;
 }
 
-.summary__option__cost {
+.cart__option__cost {
   grid-area: cost;
   text-align: right;
 }
 
-.summary__total {
+.cart__total {
   font-size: 2.2rem;
   line-height: 2.4;
   display: flex;
@@ -135,11 +135,11 @@ while keeping them available to the keyboard */
   border-top: solid 1px #252525;
 }
 
-.summary__total__label {
+.cart__total__label {
   font-weight: bold;
   flex: 2;
 }
 
-.summary__total__value {
+.cart__total__value {
   text-decoration: underline;
 }
