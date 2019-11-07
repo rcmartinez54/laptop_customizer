@@ -4,20 +4,22 @@ import CartTotal from './CartTotal';
 
 class Cart extends React.Component {
     render() {
-        const contents = Object.keys(this.props.selected).map(key => (
-            <CartOption 
-                key={key}
-                label={key}
-                name={this.props.selected[key].name}
-                cost={this.props.selected[key].cost}
-            />
-        ));
 
+        const summary = Object.keys(this.props.selected)
+            .map(key => (
+                <CartOption 
+                    key={key} 
+                    label={key}
+                    name={this.props.selected[key].name} 
+                    cost={this.props.selected[key].cost}/>
+                )
+            );
+             
         return (
-            <section className="cart">
-                <h3>Your Computer</h3>
-                {contents}
-                <CartTotal selected={this.props.selected} />
+            <section className="main__summary">
+                <h3>YOUR COMPUTER</h3>
+                {summary}
+                <CartTotal selected={this.props.selected}/>
             </section>
         )
     }
