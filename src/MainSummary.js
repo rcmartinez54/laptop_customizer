@@ -1,28 +1,28 @@
 import React from 'react';
-import SummaryOption from './SummaryOption';
-import SummaryTotal from './SummaryTotal';
 
 class MainSummary extends React.Component {
 
     render() {
 
-        const summary = Object.keys(this.props.selected)
-            .map(key => (
-                <SummaryOption 
-                    key={key} 
-                    label={key}
-                    name={this.props.selected[key].name} 
-                    cost={this.props.selected[key].cost}/>
-                )
+        const summary = Object.keys(this.state.selected).map((feature, idx) => {
+            const featureHash = feature + '-' + idx;
+            const selectedOption = this.state.selected[feature];
+      
+            return (
+              <div className="summary__option" key={featureHash}>
+                <div className="summary__option__label">{feature} </div>
+                <div className="summary__option__value">{selectedOption.name}</div>
+                <div className="summary__option__cost">
+                  {USCurrencyFormat.format(selectedOption.cost)}
+                </div>
+              </div>
             );
-             
-        return (
-            <section className="main__summary">
-                <h3>NEW GREENLEAF 2018</h3>
-                {summary}
-                <SummaryTotal selected={this.props.selected}/>
-            </section>
-        )
+          });
+      
+          const total = Object.keys(this.state.selected).reduce(
+            (acc, curr) => acc + this.state.selected[curr].cost,
+            0
+          );
     }
 
 }
