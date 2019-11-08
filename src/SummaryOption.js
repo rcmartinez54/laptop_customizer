@@ -1,6 +1,10 @@
+  
 import React from 'react';
 
-class CartOption extends React.Component {
+
+
+
+class SummaryOption extends React.Component {
     render() {
         return (
             <div className="summary__option">
@@ -17,4 +21,4 @@ class CartOption extends React.Component {
     }
 }
 
-export default CartOption;
+export default SummaryOption
