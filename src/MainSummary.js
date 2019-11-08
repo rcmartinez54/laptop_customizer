@@ -1,13 +1,14 @@
 import React from 'react';
-import CartOption from './CartOption';
-import CartTotal from './CartTotal';
+import SummaryOption from './SummaryOption';
+import SummaryTotal from './SummaryTotal';
 
-class Cart extends React.Component {
+class MainSummary extends React.Component {
+
     render() {
 
         const summary = Object.keys(this.props.selected)
             .map(key => (
-                <CartOption 
+                <SummaryOption 
                     key={key} 
                     label={key}
                     name={this.props.selected[key].name} 
@@ -17,12 +18,13 @@ class Cart extends React.Component {
              
         return (
             <section className="main__summary">
-                <h3>YOUR COMPUTER</h3>
+                <h3>NEW GREENLEAF 2018</h3>
                 {summary}
-                <CartTotal selected={this.props.selected}/>
+                <SummaryTotal selected={this.props.selected}/>
             </section>
         )
     }
+
 }
 
-export default Cart;
+export default MainSummary;

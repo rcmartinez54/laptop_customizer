@@ -1,7 +1,9 @@
 import React from 'react';
 import Feature from './Feature';
 
-class Form extends React.Component {
+
+
+class MainForm extends React.Component {
 
     render() {
         const features = Object.keys(this.props.features)
@@ -16,4 +18,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default MainForm;
